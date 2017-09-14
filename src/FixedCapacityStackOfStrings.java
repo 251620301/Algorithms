@@ -25,6 +25,10 @@ public class FixedCapacityStackOfStrings {
         return N;
     }
 
+    public boolean isFull() {
+        return N == a.length;
+    }
+
     public static void main(String args[]) {
         FixedCapacityStackOfStrings s;
         s = new FixedCapacityStackOfStrings(100);
