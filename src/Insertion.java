@@ -16,8 +16,6 @@ public class Insertion {
     private static void show(Comparable[] a) {
         for (int i=0;i<a.length;i++) {
             StdOut.print(a[i]+" ");
-            StdDraw.
-            StdDraw.show();
         }
         StdOut.println();
     }
