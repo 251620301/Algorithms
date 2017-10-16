@@ -22,6 +22,14 @@ public class SortCompare {
         if(alg.equals("Selection")) {
             Selection.sort(comparables);
         }
+        if(alg.equals("Merge")) {
+            Merge.sort(comparables);
+        }if(alg.equals("MergeBU")) {
+            MergeBU.sort(comparables);
+        }
+        if(alg.equals("Shell")) {
+            Shell.sort(comparables);
+        }
         return sw.elapsedTime();
     }
 
