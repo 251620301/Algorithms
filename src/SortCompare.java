@@ -29,6 +29,8 @@ public class SortCompare {
         }
         if(alg.equals("Shell")) {
             Shell.sort(comparables);
+        }if(alg.equals("Quick")) {
+            Quick.sort(comparables);
         }
         return sw.elapsedTime();
     }
