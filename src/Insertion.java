@@ -44,4 +44,13 @@ public class Insertion {
             }
         }
     }
+
+    public static void sort(Comparable[] a,int lo,int hi) {
+        int N = hi-lo+1;
+        for(int i=lo;i<=hi;i++) {
+            for(int j=i;j>lo&&less(a[j],a[j-1]);j--) {
+                exch(a,j,j-1);
+            }
+        }
+    }
 }

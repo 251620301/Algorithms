@@ -17,7 +17,8 @@ public class Quick {
     }
 
     public static void sort(Comparable[] a,int lo,int hi) {
-        if(lo>=hi) {
+        if(lo+7>=hi) {
+            Insertion.sort(a,lo,hi);
             return;
         }
         int j = patition(a,lo,hi);
@@ -28,7 +29,8 @@ public class Quick {
     public static int patition(Comparable[] a,int lo,int hi) {
         int i = lo;
         int j = hi+1;
-        Comparable v = a[lo];
+        Insertion.sort(a,lo,lo+2);
+        Comparable v = a[lo+1];
         while (true) {
             while (less(v,a[++i])){
                 if(i==hi){
@@ -45,7 +47,7 @@ public class Quick {
             }
             exch(a,i,j);
         }
-        exch(a,lo,j);
+        exch(a,lo+1,j);
         return j;
     }
 
